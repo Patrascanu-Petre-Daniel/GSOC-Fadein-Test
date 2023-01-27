@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Testest</title>
+  </head>
+  <body>
+    <div class="heading">
+      <span class="word">Your</span>
+      <span class="word">next</span>
+      <span class="word">agency</span>
+    </div>
+
+    <!-- GSAP e un framework pt animations aparent, dupa ce am ajuns intr-un pithole ca nu reuseam am cautat animation frameworks si l-am gasit :)) are documentatia buna  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+    <script>
+      var tl = gsap.timeline({ repeat: -1, repeatDelay: 4 });
+      tl.from(".word", {
+        duration: 1,
+        x: 150,
+        ease: Power3.easeOut,
+        stagger: 0.2,
+        autoAlpha: 0,
+      });
+    </script>
+    <!-- LINK GSAP pt documentatie and stuff https://greensock.com/gsap/  -->
+  </body>
+</html>
